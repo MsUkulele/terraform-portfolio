@@ -27,3 +27,10 @@ module "iam_role" {
   ]
 }
 
+module "website_bucket" {
+  source          = "../../modules/s3-website"
+  bucket_name     = "www.tubes.berlin"
+  index_document  = "index.html"
+  error_document  = "error.html"
+}
+
